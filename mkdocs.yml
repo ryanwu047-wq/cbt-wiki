@@ -1,0 +1,87 @@
+site_name: CBT Wiki
+site_url: https://cbt-wiki.kdns.fr/
+site_description: 遊戲 CBT（封測/刪檔測試）資訊整理 — 申請方式、下載、常見問題
+site_author: CBT Wiki
+
+# Repository for "edit this page" links
+repo_url: https://github.com/ryanwu047-wq/cbt-wiki
+edit_uri: edit/main/docs/
+repo_name: ryanwu047-wq/cbt-wiki
+
+theme:
+  name: material
+  language: zh-Hant
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切換深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: 切換淺色模式
+  font:
+    text: Noto Sans TC
+    code: JetBrains Mono
+  icon:
+    logo: material/gamepad-variant
+    edit: material/pencil
+    view: material/eye
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+  - tags
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - tables
+  - fenced_code
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tasklist
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - def_list
+  - footnotes
+
+nav:
+  - 首頁: index.md
+  - 遊戲:
+      - 遊戲列表: games/index.md
+  - 指南:
+      - 什麼是 CBT: guides/what-is-cbt.md
+      - 申請測試資格: guides/how-to-signup.md
+      - 常見問題: guides/faq.md
+  - 關於: about.md
